@@ -19,7 +19,7 @@ jupyter-lab-dii/
 └── requirements.txt            # Python dependencies
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone Repository
 
