@@ -1,0 +1,22 @@
+services:
+  jupyter:
+    container_name: jupyter
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: jupyter-base-notebook:latest
+    entrypoint: ["/usr/local/bin/entrypoint-jupyter.sh", "lab"]
+    ports:
+      - 8888:8888
+    environment:
+      - AWS_REGION=ap-southeast-7
+      - S3_BUCKET=dii-dev
+      - S3_PREFIX=notebooks/pantawat.pr
+      - S3_ENDPOINT_URL=https://s3.ap-southeast-7.amazonaws.com
+      - GRANT_SUDO=yes
+      - NB_USER=pantawat
+      - CHOWN_HOME=yes
+      - CHOWN_HOME_OPTS=-R
+
+
+
